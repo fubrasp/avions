@@ -1,0 +1,42 @@
+﻿@page
+@model AvionsModel
+@{
+    ViewData["Title"] = "Gerer les avions";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Cette page permet de gerer les avions.</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Immatriculation</th>
+            <th>Capacite Carburant</th>
+            <th>Vitesse Maximum</th>
+            <th>Vitesse Courante</th>
+            <th>Nombre Siege</th>
+            <th>Modifier</th>
+            <th>Supprimer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var avion in Model.Avions)
+        {
+        <tr>
+            <td> @avion.Id  </td>
+            <td> @avion.Immatriculation</td>
+            <td> @avion.CapaciteCarburant</td>
+            <td> @avion.VitesseMaximum</td>
+            <td> @avion.VitesseCourante</td>
+            <td> @avion.nombreSiege</td>
+            <td>
+                <!--MODIFIER-->
+            </td>
+            <td>
+                <!--SUPPRIMER-->
+            </td>
+        </tr>
+        }
+    </tbody>
+    </table>
